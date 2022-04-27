@@ -1,0 +1,387 @@
+/*Reset*/
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*HEADER*/
+header{
+    height: 100px;
+    background: #0CBB7C;
+    padding:0 50px ;
+    color:whitesmoke;
+    display:flex;
+    justify-content: space-between;/* Distribuir items uniformemente
+    El primer item al inicio, el último al final */
+    align-items: center;/*Los márgenes del elemento flexible son centrados */
+}
+.logo{
+    color:whitesmoke;
+    font-weight: 80;/*especifica el peso o grueso de la letra*/
+
+}
+.menu a{
+    color:whitesmoke;
+    text-transform: uppercase; /*Convierte todas las letras en Mayucula*/
+    text-decoration: none;
+    padding : 0 10px;
+     transition: 0.4s;
+
+}
+
+
+.mostrar-menu,
+.esconder-menu{
+   font-size: 30px;/*Tamaño de fuente*/
+   cursor:pointer;/*especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.*/
+  display:none;
+   transition: 0.4s;
+
+}
+.mostrar-menu{
+    order:1;/* order especifica el orden utilizado para disponer los elementos en su contenedor flexible*/
+}
+
+.menu a:hover ,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: crimson;
+
+}
+#check{
+    display:none;
+}
+
+#banner {
+    padding: 0 50px;
+    background-image: url(http://www.usat.edu.pe/web/wp-content/uploads/2021/12/d%C3%ADa-de-la-odontolog%C3%ADa-4-de-diciembre.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position:center;
+}
+
+
+
+#banner::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left:0;
+}
+
+
+.contenido-banner{
+    position: relative;
+    color:rgb(26, 1, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+     font-weight: 400;
+     padding: 10px 0px;
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+
+}
+
+/*Footer*/
+
+
+
+
+/*Inf en inicio*/
+.about-div{
+  width:100%;
+  height: auto;
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.about-div img{
+  width:350px;
+  height:250px;
+  border-radius: 8px;
+  border:8px solid #03164C;
+  display: inline;
+  margin-top: 10px;
+  transition-duration: .5s;
+}
+
+.about-div img:hover{
+  transform: scale(0.8);
+}
+
+.about-txt{
+  width:60%;
+  height: auto;
+  font-size: 22px;
+  color:#333;
+  font-family: cursive;
+  line-height: 30px;
+}
+.about-txt a{
+  text-decoration: none;
+  font-size: 25px;
+  color:#f18;
+  margin-right: 20px;
+  text-align: center;
+}
+@media screen and (max-width:768px){
+
+.about-div{
+  width:100%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+}
+.about-div img{
+  width:200px;
+  height: 200px;
+  border:8px solid #03164C;
+  display: inline;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition-duration: .5s;
+  
+}
+
+.about-div img:hover{
+  transform: scale(1.1);
+}
+
+
+
+}
+
+/*Servicios*/
+
+  
+  /* Setting up the responsive Grid container - auto-fit + minmax() */
+  .albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+    margin: 2em;
+  }
+  
+   
+  /*Botones*/
+  .button {
+    background-color: #2DBA15
+    ;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+/*Efecto del botonm*/
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+  /* Grid Album cards */
+  .album {
+    background: rgba(127, 255, 212, 0.5);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    padding: 1.5em;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.5em;
+    align-items: center;
+    color: blue;
+    font-weight: 100;
+  }
+  
+  
+  /* Imageneres */
+  .album__imagenes {
+    width: 100%;
+    border-radius: 0.4em;
+  }
+  
+  
+  /* Some additional text styling */
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25em;
+  }
+  
+  .album__artist {
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    font-style: oblique;
+    letter-spacing: .7px;
+  }
+/*footer*/
+
+.footer-basic-centered{
+	background-color:#121221 ;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+
+	padding: 45px;
+	margin-top: 80px;
+}
+
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}
+
+
+/*Responsive*/
+@media (max-width: 768px){
+    /*Header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0CBB7C ;
+       
+        right:-100%;
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;
+        right:40px;
+    }
+    #check:checked ~ .menu {
+        right:0;
+
+    }
+    /**/
+
+    /*Footer*/
+  
+
+    
+  @media screen and (max-width: 768px) {
+    .footer .col-sm-3 {
+      padding-bottom: 2rem;
+    }
+  }
+
+
+
+
+}
+
+
+/* Tamaño del contenido a mostrar */
+
+.album__desc {
+  width: 250px;
+  margin: 0 1em 1em 0;
+  overflow: hidden;
+}
+.nombre_esp {
+  width: 250px;
+  margin: 0 1em 1em 0;
+  overflow: hidden;
+}
+.nombre_esp h2 {
+  margin: 1em;
+}
+.album__desc p {
+  margin: 1em;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
