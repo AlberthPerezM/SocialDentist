@@ -1,2 +1,2 @@
-# SocialDentist
+DentoDentist
 proyecto de investigacion GN
